@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+            <!--========== BOX ICONS ==========-->
+            <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+            <!--========== CSS ==========-->
+            <link rel="stylesheet" href="assets/css/styles.css">
+            <link rel="stylesheet" href="assets/css/sans.css">
+            <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2285%22>❓</text></svg>" type="image/x-icon">
+    <title>Query-Search Engine</title>
+   
+</head>
+<body>
+  <style>
+    @font-face {
+    font-family: Jatina Script;
+    font-style: normal;
+    font-weight: 400;
+    src: url("assets/css/Jatina Script.ttf");
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+  body{
+      background: url('https://source.unsplash.com/random/900×700/?science,astronomy,education,physics,nasa,space,fruits,food,college');
+      background-repeat: no-repeat;
+      justify-content: center;
+      background-size: 100%;
+      align-items: center;
+  }
+
+  </style>
+
+  <div style="font-size:18px ;" class="cssans cssans--center">
+  <div class="cssans__accessible">CSSans Pro</div>
+  <div class="cssans__word">
+    <b class="cssans:Q"></b>
+    <b class="cssans:U"></b>
+    <b class="cssans:E"></b>
+    <b class="cssans:R"></b>
+    <b class="cssans:Y"></b>
+</div>
+<br>
+
+</div>
+
+  <!--   <i class='bx bx-moon change-theme' onclick="darkMode()" id="theme-button"></i>
+ -->
+
+    <!-- Search Form -->
+<form  id="labnol" method="get" action="https://www.google.com/search">
+    <div class="speech" style="margin-bottom: 102px;">
+      <input  type="text" name="q" id="transcript" class="query" placeholder="Write your query or use voice search" value="" required style="font-size: medium;"/>
+      <!-- <img id="mic" onclick="startDictation(); show();"  style="height: 18px;" id="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/625px-Google_mic.svg.png?20210606084256" /> -->
+      <img style="display:none;margin: auto;margin-top: 10px;" id="search" src="assets/images/output-onlinegiftools.gif" />
+      <div style="margin: auto;display:flex; margin-top: 10px;">
+          <button  onclick="startDictation(); show();"id="voice">🎙️</button>
+      
+      <button class="searchBtn">🔍</button>
+    </div>
+    
+    </div>
+  </form>
+
+
+    <script>
+/*         let query = document.querySelector('.query');
+        let searchBtn = document.querySelector('.searchBtn');
+
+        searchBtn.onclick = function(){
+            let url = 'https://www.google.com/search?q='+query.value;
+            window.open(url,'_self');
+        }
+
+        var input = document.querySelector(".query");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.querySelector(".searchBtn").click();
+  }
+}); */
+function show() {
+ 
+ /* Access image by id and change
+ the display property to block*/
+ document.getElementById('search')
+         .style.display = "block";
+
+ document.getElementById('voice')
+         .style.display = "none";
+}
+window.addEventListener( "pageshow", function ( event ) {
+  var historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    //alert('refresh');
+    window.location.reload();
+  }
+});
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
